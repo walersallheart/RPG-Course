@@ -8,6 +8,8 @@ using RPG.Control;
 namespace RPG.Shops{
     public class Shop : MonoBehaviour, IRaycastable
     {
+        [SerializeField] string shopName;
+
         public class ShopItem{
             InventoryItem item;
             int availability;
@@ -25,6 +27,12 @@ namespace RPG.Shops{
         public bool IsBuyingMode() { return true; }
         public bool CanTransact() { return true; }
         public void ConfirmTransaction(){}
+
+        public string GetShopName()
+        {
+            return shopName;
+        }
+
         public float TransactionTotal(){ return 0;}
         public void AddToTransaction(InventoryItem item, int quantity) {}
 

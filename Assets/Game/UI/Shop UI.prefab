@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75be6571a1ee54574895b934d4d0acdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopName: {fileID: 6376088261950244174}
 --- !u!1 &7254990764297391490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1226,17 @@ PrefabInstance:
     - target: {fileID: 391654773294499272, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3,
         type: 3}
       propertyPath: m_text
-      value: Mr Bongo's Shop
+      value: Mr Bongo's Shop Emporium
+      objectReference: {fileID: 0}
+    - target: {fileID: 391654773294499272, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 391654773294499272, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3168268011872070852, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3,
         type: 3}
@@ -1265,7 +1276,7 @@ PrefabInstance:
     - target: {fileID: 3168268011872070852, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 758.25
+      value: 1072.598
       objectReference: {fileID: 0}
     - target: {fileID: 3168268011872070852, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3,
         type: 3}
@@ -1315,7 +1326,7 @@ PrefabInstance:
     - target: {fileID: 3168268011872070852, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -19.6
+      value: -29.2
       objectReference: {fileID: 0}
     - target: {fileID: 3168268011872070852, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3,
         type: 3}
@@ -1339,6 +1350,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3, type: 3}
+--- !u!114 &6376088261950244174 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 391654773294499272, guid: 792b40d8b79e54b34a7d8ee10dfd9cf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 6706710381602734214}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6930318587676172565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2104,6 +2127,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quit Button
       objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3188112527222770693}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Close
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RPG.UI.Shops.ShopUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff2a9ddd186d44c3e85dbd907a6ffb15, type: 3}
 --- !u!1001 &8824965660697373172
@@ -2380,7 +2438,7 @@ PrefabInstance:
     - target: {fileID: 5754255307465066956, guid: 7d667d9ba23b64b838e84ee9c70c9a63,
         type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6660534532979852035, guid: 7d667d9ba23b64b838e84ee9c70c9a63,
         type: 3}
