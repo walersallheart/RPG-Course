@@ -17,7 +17,7 @@ namespace RPG.Shops{
             10, 10.0f, 0);
 
             yield return new ShopItem(InventoryItem.GetFromID("28c6f2e6-46e9-4879-a14f-d6998c781cb7"),
-            10, 10.0f, 0);
+            10, 10099.0f, 0);
 
             yield return new ShopItem(InventoryItem.GetFromID("dbc1e40e-d3bd-4e26-a62b-6cff0e46c415"),
             10, 10.0f, 0);
