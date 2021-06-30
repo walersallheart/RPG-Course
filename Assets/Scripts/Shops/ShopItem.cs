@@ -34,5 +34,10 @@ namespace RPG.Shops {
         public float GetPrice(){
             return price;
         }
+
+        public InventoryItem GetInventoryItem()
+        {
+            return item;
+        }
     }
 }

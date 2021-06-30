@@ -44,7 +44,9 @@ namespace RPG.Shops{
         }
 
         public float TransactionTotal(){ return 0;}
-        public void AddToTransaction(InventoryItem item, int quantity) {}
+        public void AddToTransaction(InventoryItem item, int quantity) {
+            Debug.Log("quantity"+quantity);
+        }
 
         public CursorType GetCursorType()
         {
