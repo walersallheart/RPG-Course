@@ -4,6 +4,7 @@ using UnityEngine;
 using GameDevTV.Inventories;
 using System;
 using RPG.Control;
+using RPG.Inventories;
 
 namespace RPG.Shops{
     public class Shop : MonoBehaviour, IRaycastable
@@ -51,20 +52,24 @@ namespace RPG.Shops{
         public bool CanTransact() { return true; }
         public void ConfirmTransaction(){
             Inventory shopperInventory = currentShopper.GetComponent<Inventory>();
+            Purse shopperPurse = currentShopper.GetComponent<Purse>();
 
-            if (shopperInventory == null) { return; }
+            if (shopperInventory == null || shopperPurse == null) { return; }
 
-            var transactionSnapshot = new Dictionary<InventoryItem, int>(transaction);
-
-            foreach (InventoryItem item in transactionSnapshot.Keys) {
-                int quantity = transaction[item];
+            foreach (ShopItem shopItem in GetAllItems()) {
+                InventoryItem item = shopItem.GetInventoryItem();
+                int quantity = shopItem.GetQuantityInTransaction();
+                float price = shopItem.GetPrice();
 
                 for (int i = 0; i < quantity; i++)
                 {
+                    if (shopperPurse.GetBalance() < price) { break; }
+
                     bool success = shopperInventory.AddToFirstEmptySlot(item, 1);
 
                     if (success) {
                         AddToTransaction(item, -1);
+                        shopperPurse.UpdateBalance(-price);
                     }
                 }
             }
