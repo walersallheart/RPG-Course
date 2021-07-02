@@ -62,5 +62,8 @@ namespace RPG.UI.Shops{
         public void Close(){
             shopper.SetActiveShop(null);
         }
+        public void ConfirmTransaction(){
+            currentShop.ConfirmTransaction();
+        }
     }
 }

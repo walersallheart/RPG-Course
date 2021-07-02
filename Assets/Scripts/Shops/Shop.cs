@@ -22,8 +22,13 @@ namespace RPG.Shops{
         }
 
         Dictionary<InventoryItem, int> transaction = new Dictionary<InventoryItem, int>();
+        Shopper currentShopper = null;
 
         public event Action onChange;
+
+        public void SetShopper(Shopper shopper) {
+            currentShopper = shopper;
+        }
 
         public IEnumerable<ShopItem> GetFilteredItems(){ 
             foreach (StockItemConfig config in stockConfig)
@@ -39,7 +44,26 @@ namespace RPG.Shops{
         public void SelectMode(bool isBuying) {}
         public bool IsBuyingMode() { return true; }
         public bool CanTransact() { return true; }
-        public void ConfirmTransaction(){}
+        public void ConfirmTransaction(){
+            Inventory shopperInventory = currentShopper.GetComponent<Inventory>();
+
+            if (shopperInventory == null) { return; }
+
+            var transactionSnapshot = new Dictionary<InventoryItem, int>(transaction);
+
+            foreach (InventoryItem item in transactionSnapshot.Keys) {
+                int quantity = transaction[item];
+
+                for (int i = 0; i < quantity; i++)
+                {
+                    bool success = shopperInventory.AddToFirstEmptySlot(item, 1);
+
+                    if (success) {
+                        AddToTransaction(item, -1);
+                    }
+                }
+            }
+        }
 
         public string GetShopName()
         {
