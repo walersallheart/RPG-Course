@@ -11,6 +11,9 @@ namespace RPG.Shops{
     {
         [SerializeField] string shopName;
 
+        [Range(0,100)]
+        [SerializeField] float sellingPercentage = 80f;
+
         //Stock Config
         [SerializeField] StockItemConfig[] stockConfig;
 
@@ -25,6 +28,8 @@ namespace RPG.Shops{
         Dictionary<InventoryItem, int> transaction = new Dictionary<InventoryItem, int>();
         Dictionary<InventoryItem, int> stock = new Dictionary<InventoryItem, int>();
         Shopper currentShopper = null;
+
+        bool isBuyingMode = true;
 
         public event Action onChange;
 
@@ -46,20 +51,37 @@ namespace RPG.Shops{
         public IEnumerable<ShopItem> GetAllItems(){
             foreach (StockItemConfig config in stockConfig)
             {
-                float price = config.item.GetPrice() * (1 - config.buyingDiscountPercentage/100);
+                float price = GetPrice(config);
                 int quantityInTransaction = 0;
                 transaction.TryGetValue(config.item, out quantityInTransaction);
 
                 int currentStock = stock[config.item];
-             
+
                 yield return new ShopItem(config.item, currentStock, price, quantityInTransaction);
             }
         }
 
+        private float GetPrice(StockItemConfig config)
+        {
+            if (IsBuyingMode()) {
+                return config.item.GetPrice() * (1 - config.buyingDiscountPercentage / 100);
+            }
+            
+            return config.item.GetPrice() * (sellingPercentage / 100);
+        }
+
         public void SelectFilter(ItemCategory category){}
         public ItemCategory GetFilters(){ return ItemCategory.None; }
-        public void SelectMode(bool isBuying) {}
-        public bool IsBuyingMode() { return true; }
+        public void SelectMode(bool isBuying) {
+            isBuyingMode = isBuying;
+
+            if (onChange != null) {
+                onChange();
+            }
+        }
+        public bool IsBuyingMode() {
+            return isBuyingMode;
+        }
         public bool CanTransact() {
             if (IsTransactionEmpty()) { return false; }
             if (!HasSufficientFunds()) { return false; }

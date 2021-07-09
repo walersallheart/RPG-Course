@@ -18,6 +18,7 @@ MonoBehaviour:
     type: 3}
   totalField: {fileID: 3129192437320250627}
   confirmButton: {fileID: 4537220549492677730}
+  switchButton: {fileID: 1206593483051208606}
 --- !u!1 &7254990764297391490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1561,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b5d02536d7c64e89b9f26d8a7eb8b8d, type: 3}
+--- !u!114 &1206593483051208606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8112071893007740555, guid: 2b5d02536d7c64e89b9f26d8a7eb8b8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6930318587676172565}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7123900505909846020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2524,7 +2537,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scroll View
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5776627398597269253, guid: 7d667d9ba23b64b838e84ee9c70c9a63, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d667d9ba23b64b838e84ee9c70c9a63, type: 3}
 --- !u!224 &6736311978603758497 stripped
 RectTransform:
