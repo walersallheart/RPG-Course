@@ -54,20 +54,11 @@ namespace RPG.Shops{
                 float price = GetPrice(config);
                 int quantityInTransaction = 0;
                 transaction.TryGetValue(config.item, out quantityInTransaction);
+                
+                int availability = GetAvailability(config.item);
 
-                int currentStock = stock[config.item];
-
-                yield return new ShopItem(config.item, currentStock, price, quantityInTransaction);
+                yield return new ShopItem(config.item, availability, price, quantityInTransaction);
             }
-        }
-
-        private float GetPrice(StockItemConfig config)
-        {
-            if (IsBuyingMode()) {
-                return config.item.GetPrice() * (1 - config.buyingDiscountPercentage / 100);
-            }
-            
-            return config.item.GetPrice() * (sellingPercentage / 100);
         }
 
         public void SelectFilter(ItemCategory category){}
@@ -176,8 +167,10 @@ namespace RPG.Shops{
                 transaction[item] = 0;
             }
 
-            if (transaction[item] + quantity > stock[item]) {
-                transaction[item] = stock[item];
+            int availability = GetAvailability(item);
+
+            if (transaction[item] + quantity > availability) {
+                transaction[item] = availability;
             } else {
                 transaction[item] += quantity;
             }
@@ -203,6 +196,42 @@ namespace RPG.Shops{
             }
 
             return true;
+        }
+
+        private int GetAvailability(InventoryItem item)
+        {
+            if (isBuyingMode) {
+                return stock[item];
+            }
+
+            return CountItemsInInventory(item);
+        }
+
+        private int CountItemsInInventory(InventoryItem item)
+        {
+            Inventory inventory = currentShopper.GetComponent<Inventory>();
+
+            if (inventory == null) { return 0; }
+
+            int total = 0;
+
+            for (int i = 0; i < inventory.GetSize(); i++)
+            {
+                if (inventory.GetItemInSlot(i) == item) {
+                    total += inventory.GetNumberInSlot(i);
+                }
+            }
+
+            return total;
+        }
+
+        private float GetPrice(StockItemConfig config)
+        {
+            if (IsBuyingMode()) {
+                return config.item.GetPrice() * (1 - config.buyingDiscountPercentage / 100);
+            }
+            
+            return config.item.GetPrice() * (sellingPercentage / 100);
         }
     }
 }
