@@ -45,8 +45,15 @@ namespace RPG.Shops{
             currentShopper = shopper;
         }
 
-        public IEnumerable<ShopItem> GetFilteredItems(){ 
-            return GetAllItems();
+        public IEnumerable<ShopItem> GetFilteredItems(){
+            foreach (ShopItem shopItem in GetAllItems())
+            {
+                InventoryItem item = shopItem.GetInventoryItem();
+
+                if (filter == ItemCategory.None || item.GetCategory() == filter) {
+                    yield return shopItem;
+                }
+            }
         }
 
         public IEnumerable<ShopItem> GetAllItems(){
