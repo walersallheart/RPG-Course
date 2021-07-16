@@ -69,7 +69,7 @@ namespace RPG.Shops{
                 onChange();
             }
         }
-        public ItemCategory GetFilters(){ 
+        public ItemCategory GetFilter(){ 
             return filter;
         }
         public void SelectMode(bool isBuying) {
