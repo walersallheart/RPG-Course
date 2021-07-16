@@ -30,6 +30,7 @@ namespace RPG.Shops{
         Shopper currentShopper = null;
 
         bool isBuyingMode = true;
+        ItemCategory filter = ItemCategory.None;
 
         public event Action onChange;
 
@@ -61,8 +62,16 @@ namespace RPG.Shops{
             }
         }
 
-        public void SelectFilter(ItemCategory category){}
-        public ItemCategory GetFilters(){ return ItemCategory.None; }
+        public void SelectFilter(ItemCategory category){
+            filter = category;
+
+            if (onChange != null) {
+                onChange();
+            }
+        }
+        public ItemCategory GetFilters(){ 
+            return filter;
+        }
         public void SelectMode(bool isBuying) {
             isBuyingMode = isBuying;
 
