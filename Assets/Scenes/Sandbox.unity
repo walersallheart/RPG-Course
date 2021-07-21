@@ -1293,6 +1293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710976594963960814, guid: c5c769cfc8ac64593ab55e8592020bbb,
         type: 3}
+      propertyPath: stockConfig.Array.data[1].buyingDiscountPercentage
+      value: 10.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710976594963960814, guid: c5c769cfc8ac64593ab55e8592020bbb,
+        type: 3}
       propertyPath: stockConfig.Array.data[2].buyingDiscountPercentage
       value: 0
       objectReference: {fileID: 0}
@@ -9954,7 +9959,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874861664}
-  m_LocalRotation: {x: 0.15534082, y: -0.06980496, z: 0.011005, w: 0.9853301}
+  m_LocalRotation: {x: 0.15534082, y: -0.06980495, z: 0.011004999, w: 0.9853301}
   m_LocalPosition: {x: 2.15, y: 4.69, z: -2.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13070,7 +13075,7 @@ PrefabInstance:
     - target: {fileID: 5263524460118599961, guid: 9065ec7e81ca8034a865d6fdd7906af9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -570.75006
+      value: -570.75
       objectReference: {fileID: 0}
     - target: {fileID: 5263917500653042737, guid: 9065ec7e81ca8034a865d6fdd7906af9,
         type: 3}
