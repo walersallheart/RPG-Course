@@ -3306,7 +3306,7 @@ GameObject:
   - component: {fileID: 526310458}
   - component: {fileID: 526310457}
   - component: {fileID: 526310456}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain_South
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5093,7 +5093,7 @@ GameObject:
   - component: {fileID: 871023142}
   - component: {fileID: 871023141}
   - component: {fileID: 871023140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13091,7 +13091,7 @@ PrefabInstance:
     - target: {fileID: 5263524460118599961, guid: 9065ec7e81ca8034a865d6fdd7906af9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -570.7501
+      value: -570.75
       objectReference: {fileID: 0}
     - target: {fileID: 5263917500653042737, guid: 9065ec7e81ca8034a865d6fdd7906af9,
         type: 3}
