@@ -16,13 +16,13 @@ namespace RPG.Abilities{
 
         Transform targetingPrefabInstance = null;
 
-        public override void StartTargeting(GameObject user, Action<IEnumerable<GameObject>> finished)
+        public override void StartTargeting(AbilityData data, Action finished)
         {
-            PlayerController playerController = user.GetComponent<PlayerController>();
-            playerController.StartCoroutine(Targeting(user, playerController, finished));
+            PlayerController playerController = data.GetUser().GetComponent<PlayerController>();
+            playerController.StartCoroutine(Targeting(data, playerController, finished));
         }
 
-        IEnumerator Targeting(GameObject user, PlayerController playerController, Action<IEnumerable<GameObject>> finished){
+        IEnumerator Targeting(AbilityData data, PlayerController playerController, Action finished){
             playerController.enabled = false;
 
             if (targetingPrefabInstance == null) {
@@ -49,7 +49,9 @@ namespace RPG.Abilities{
                         playerController.enabled = true;
                         targetingPrefabInstance.gameObject.SetActive(false);
 
-                        finished(GetGameObjectsInRadius(raycastHit.point));
+                        data.SetTargets(GetGameObjectsInRadius(raycastHit.point));
+
+                        finished();
                         yield break;
                     }
                 }
