@@ -26,6 +26,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352ecec9daa37e948a1dcfc424ea8a7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3127825918325365420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4902660786131331472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fade74228865243be9cdf9792e369631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingBalance: 400
 --- !u!114 &4418362954710017705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +148,7 @@ MonoBehaviour:
     hotspot: {x: 0, y: 0}
   maxNavMeshProjectionDistance: 1
   raycastRadius: 1
+  numberOfAbilities: 6
 --- !u!114 &7467434726610659713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Herbet Socksworthy
---- !u!114 &3127825918325365420
+--- !u!114 &-4817697662371566883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,10 +171,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4902660786131331472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fade74228865243be9cdf9792e369631, type: 3}
+  m_Script: {fileID: 11500000, guid: e23fe1ec4a4cf4821a3588211b67efbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 400
 --- !u!1001 &1080417002832114521
 PrefabInstance:
   m_ObjectHideFlags: 0
