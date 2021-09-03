@@ -5,7 +5,7 @@ using RPG.Stats;
 using UnityEngine;
 
 namespace RPG.Attributes{
-    public class Mana : MonoBehaviour
+    public class Mana : MonoBehaviour, GameDevTV.Saving.ISaveable
     {
         LazyValue<float> mana;
 
@@ -41,6 +41,16 @@ namespace RPG.Attributes{
 
             mana.value -= manaToUse;
             return true;
+        }
+
+        public object CaptureState()
+        {
+            return mana.value;
+        }
+
+        public void RestoreState(object state)
+        {
+            mana.value = (float) state;
         }
     }
 }
