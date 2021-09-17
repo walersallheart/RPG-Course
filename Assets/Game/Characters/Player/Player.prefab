@@ -115,6 +115,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a5cb69441584179bd2c0bcc535b491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5797615419591466179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4902660786131331472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b073af708c53413e88338fee76c8e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6703574276284088049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Herbet Socksworthy
---- !u!114 &5797615419591466179
+--- !u!114 &7640711628285345849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,10 +195,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4902660786131331472}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b073af708c53413e88338fee76c8e94, type: 3}
+  m_Script: {fileID: 11500000, guid: 125ebad8283f44da4ad671fb700b0717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMana: 200
 --- !u!1001 &1080417002832114521
 PrefabInstance:
   m_ObjectHideFlags: 0
