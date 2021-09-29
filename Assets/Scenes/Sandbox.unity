@@ -1208,6 +1208,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710976594963960814, guid: c5c769cfc8ac64593ab55e8592020bbb,
         type: 3}
+      propertyPath: maximumBarterDiscount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710976594963960814, guid: c5c769cfc8ac64593ab55e8592020bbb,
+        type: 3}
       propertyPath: stockConfig.Array.size
       value: 8
       objectReference: {fileID: 0}
@@ -13118,7 +13123,7 @@ PrefabInstance:
     - target: {fileID: 5263524460118599961, guid: 9065ec7e81ca8034a865d6fdd7906af9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -568.5152
+      value: -570.7498
       objectReference: {fileID: 0}
     - target: {fileID: 5263917500653042737, guid: 9065ec7e81ca8034a865d6fdd7906af9,
         type: 3}
