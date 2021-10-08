@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 35
+    m_Right: 35
+    m_Top: 35
+    m_Bottom: 35
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -176,7 +176,7 @@ PrefabInstance:
     - target: {fileID: 8778180164684631801, guid: 2b5d02536d7c64e89b9f26d8a7eb8b8d,
         type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Auto Layout Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b5d02536d7c64e89b9f26d8a7eb8b8d, type: 3}

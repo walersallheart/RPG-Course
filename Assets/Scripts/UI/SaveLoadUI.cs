@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.SceneManagement;
+using TMPro;
 using UnityEngine;
 
     namespace RPG.UI {
@@ -15,11 +17,14 @@ using UnityEngine;
                 Destroy(child.gameObject);
             }
 
-            Instantiate(buttonPrefab, contentRoot);
-            Instantiate(buttonPrefab, contentRoot);
-            Instantiate(buttonPrefab, contentRoot);
-            Instantiate(buttonPrefab, contentRoot);
-            Instantiate(buttonPrefab, contentRoot);
+            SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+
+            foreach (string save in savingWrapper.ListSaves())
+            {
+                GameObject buttonInstance = Instantiate(buttonPrefab, contentRoot);
+                TMP_Text textComp = buttonInstance.GetComponentInChildren<TMP_Text>();
+                textComp.text = save;
+            }
         }
 
     }

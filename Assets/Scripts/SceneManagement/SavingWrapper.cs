@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using GameDevTV.Saving;
 using UnityEngine;
 
@@ -51,6 +52,10 @@ namespace RPG.SceneManagement
         public void Delete()
         {
             GetComponent<SavingSystem>().Delete(defaultSaveFile);
+        }
+
+        public IEnumerable<string> ListSaves(){
+            return GetComponent<SavingSystem>().ListSaves();
         }
     }
 }
