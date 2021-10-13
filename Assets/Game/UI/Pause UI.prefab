@@ -294,7 +294,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5485935505802026432}
+      objectReference: {fileID: 6113347613871951710}
     - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -303,12 +303,12 @@ PrefabInstance:
     - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Toggle
+      value: SaveAndQuit
       objectReference: {fileID: 0}
     - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameDevTV.UI.ShowHideUI, Assembly-CSharp
+      value: RPG.UI.PauseMenuUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
         type: 3}
@@ -900,6 +900,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quit Button
       objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5485935505802026432}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameDevTV.UI.ShowHideUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481577874692723055, guid: ff2a9ddd186d44c3e85dbd907a6ffb15,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff2a9ddd186d44c3e85dbd907a6ffb15, type: 3}
 --- !u!1001 &8636635314022487556
@@ -1053,6 +1088,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6113347613871951710}
+    - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Save
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RPG.UI.PauseMenuUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353557582656637788, guid: ae5911c1bff894a41a2f77fb385099e4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8839526399355480878, guid: ae5911c1bff894a41a2f77fb385099e4,
         type: 3}
