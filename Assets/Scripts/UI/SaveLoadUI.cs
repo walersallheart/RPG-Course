@@ -12,13 +12,14 @@ namespace RPG.UI {
         [SerializeField] GameObject buttonPrefab;
 
         private void OnEnable() {
-            print("Loading Saves...");
+            SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+
+            if (savingWrapper == null) { return; }
+
             foreach (Transform child in contentRoot)
             {
                 Destroy(child.gameObject);
             }
-
-            SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
 
             foreach (string save in savingWrapper.ListSaves())
             {
