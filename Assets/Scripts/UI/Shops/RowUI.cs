@@ -31,12 +31,10 @@ namespace RPG.UI.Shops{
         }
 
         public void Add(){
-            Debug.Log("Add()");
             currentShop.AddToTransaction(item.GetInventoryItem(), 1);
         }
 
         public void Remove(){
-            Debug.Log("Remove()");
             currentShop.AddToTransaction(item.GetInventoryItem(), -1);
         }
     }

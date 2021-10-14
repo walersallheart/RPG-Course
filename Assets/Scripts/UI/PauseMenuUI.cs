@@ -14,11 +14,15 @@ namespace RPG.UI {
         }
 
         private void OnEnable() {
+            if (playerController == null) { return; }
+
             Time.timeScale = 0;
             playerController.enabled = false;
         }
 
         private void OnDisable() {
+            if (playerController == null) { return; }
+
             Time.timeScale = 1f;
             playerController.enabled = true;
         }
