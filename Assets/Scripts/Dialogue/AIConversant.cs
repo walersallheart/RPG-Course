@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using RPG.Attributes;
 using RPG.Control;
 using UnityEngine;
 
@@ -19,6 +20,10 @@ namespace RPG.Dialogue
         {
             if (dialogue == null)
             {
+                return false;
+            }
+
+            if (GetComponent<Health>().IsDead()) {
                 return false;
             }
 
