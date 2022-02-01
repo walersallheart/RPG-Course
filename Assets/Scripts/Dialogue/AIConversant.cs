@@ -23,7 +23,9 @@ namespace RPG.Dialogue
                 return false;
             }
 
-            if (GetComponent<Health>().IsDead()) {
+            Health health = GetComponent<Health>();
+
+            if (health && health.IsDead()) {
                 return false;
             }
 
